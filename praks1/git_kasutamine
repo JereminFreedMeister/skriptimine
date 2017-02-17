@@ -14,7 +14,7 @@ mkdir skriptimine
 c)sisene antud kausta
 cd skriptimine
 
-d)tekita lokaalne repositoorium git systeemi jaoks antud kaustas
+d)tekita lokaalne repositoorium git süsteemi jaoks antud kaustas
 git init
 
 remote seadistamine:
@@ -24,3 +24,14 @@ git remote add skriptimine https://github.com/JereminFreedMeister/reponimi.git
 
 b) git remote kontroll
 git remote -v
+
+põhikasutamine:
+
+a) pane fail jälgimisele:
+git add failinimi
+
+b) lisa kirjelduse muudatuse kohta
+git commit -m "lühikirjelduse lause"
+
+c) lisa kaugrepositooriumi
+git push -uf skriptimine master
