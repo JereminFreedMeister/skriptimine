@@ -4,7 +4,7 @@ installi - apt-get install git
 esmakordselt:
 
 a) seadista - maara kasutajanimi, email, editor
-git config --global user.name "JereminFreedMeister"
+git config --global user.name "JereminFreed Meister"
 git config --global user.email j.meister@khk.ee
 git config --global core.editor nano
 
