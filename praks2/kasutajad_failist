@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -f kasutajad -a -r kasutajad ]; then
+	echo "Kasutajad loodud edukalt!"
+for rida in $(cat kasutajad)
+do
+	sh lisa_kasutaja $rida
+	done
+else
+	echo "Kasutajate loomisel ilmnes probleem"
+fi
