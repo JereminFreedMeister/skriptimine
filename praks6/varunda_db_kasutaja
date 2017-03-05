@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Sisesta kasutajanimi"
+read kasutajanimi
+andmebaas=$kasutajanimi'_andmebaas'
+date=$(date +%y-%m-%d.%H-%M.$andmebaas.backup.sql)
+mysqldump  --user=root --password=qwerty $andmebaas > /mysql_backup/$date.$andmebaas.backup.sql
