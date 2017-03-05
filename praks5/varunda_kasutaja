@@ -1,0 +1,9 @@
+#!/bin/bash
+#	Kasutaja home kausta backup
+#
+echo "Sisesta kasutajanimi"
+read kasutajanimi
+kuupaev=$(date +%d.%m.%y)
+tar -PcvjSf /backup/$kasutajanimi.$kuupaev.tar.bz2 /home/$kasutajanimi
+echo " "
+echo "$kasutajanimi andmete varundamine lõpetatud"
