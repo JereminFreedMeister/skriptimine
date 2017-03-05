@@ -1,0 +1,19 @@
+#!/bin/bash
+# Kasutajad kahest failist parooliga
+# Jeremin Freed Meister ISP15
+echo "Sisesta kasutajanimede fail: "
+read kasutajad
+
+echo "Sisesta paroolide fail: "
+read paroolid
+
+nimekiri=`paste -d: $kasutajad $paroolid`
+
+for i in $nimekiri
+do
+kasutaja=`echo $i | cut -d \: -f 1`
+parool=`echo $i | cut -d \: -f 2`
+sh ./lisa_kasutaja $kasutaja
+echo $kasutaja:$parool | chpasswd
+echo "Loodud" $kasutaja "parooliga" $parool
+done
